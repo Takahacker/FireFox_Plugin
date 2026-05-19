@@ -162,7 +162,7 @@ Página web
 
 
 ---
-![Privacy Guard no YouTube](docs/interessante.png)
+![Privacy Guard no YouTube](docs/Interessante.png)
 
 
 # Miojo Cremoso na Frigideira
