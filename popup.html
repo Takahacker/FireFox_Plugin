@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Privacy Guard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <header>
+    <span class="ext-title">Privacy Guard</span>
+    <div class="header-right">
+      <span id="page-domain" class="page-domain">—</span>
+      <button id="btn-theme" title="Personalizar cor do tema" aria-label="Personalizar cor">🎨</button>
+    </div>
+  </header>
+
+  <div id="theme-panel" hidden>
+    <span class="theme-label">Tema:</span>
+    <div class="theme-swatches" id="theme-swatches">
+      <button class="swatch" data-color="#1e40af" style="background:#1e40af" title="Azul (padrão)"></button>
+      <button class="swatch" data-color="#4f46e5" style="background:#4f46e5" title="Índigo"></button>
+      <button class="swatch" data-color="#7c3aed" style="background:#7c3aed" title="Roxo"></button>
+      <button class="swatch" data-color="#be185d" style="background:#be185d" title="Rosa"></button>
+      <button class="swatch" data-color="#dc2626" style="background:#dc2626" title="Vermelho"></button>
+      <button class="swatch" data-color="#ea580c" style="background:#ea580c" title="Laranja"></button>
+      <button class="swatch" data-color="#15803d" style="background:#15803d" title="Verde"></button>
+      <button class="swatch" data-color="#0f766e" style="background:#0f766e" title="Teal"></button>
+      <button class="swatch" data-color="#374151" style="background:#374151" title="Cinza escuro"></button>
+    </div>
+    <div class="theme-custom">
+      <label for="color-custom">Personalizado</label>
+      <input type="color" id="color-custom" value="#1e40af">
+    </div>
+  </div>
+
+  <section id="score-section">
+    <div id="score-ring">
+      <svg viewBox="0 0 80 80" width="80" height="80">
+        <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="7"/>
+        <circle id="score-arc" cx="40" cy="40" r="34" fill="none"
+                stroke="#22c55e" stroke-width="7"
+                stroke-linecap="round"
+                stroke-dasharray="213.6"
+                stroke-dashoffset="213.6"
+                transform="rotate(-90 40 40)"/>
+      </svg>
+      <div id="score-number">—</div>
+    </div>
+    <div id="score-info">
+      <div id="score-grade">Analisando...</div>
+      <ul id="score-breakdown"></ul>
+    </div>
+  </section>
+
+  <nav id="tabs">
+    <button class="tab-btn active" data-tab="tracking">
+      Conexões <span class="badge" id="badge-tracking">0</span>
+    </button>
+    <button class="tab-btn" data-tab="cookies">
+      Cookies <span class="badge" id="badge-cookies">0</span>
+    </button>
+    <button class="tab-btn" data-tab="storage">
+      Storage
+    </button>
+    <button class="tab-btn" data-tab="fingerprint">
+      Fingerprint <span class="badge" id="badge-fp">0</span>
+    </button>
+    <button class="tab-btn" data-tab="hijacking">
+      Hijacking <span class="badge" id="badge-hijack">0</span>
+    </button>
+  </nav>
+
+  <div id="tab-content">
+
+    <div id="tab-tracking" class="tab-panel active">
+      <div class="panel-header">
+        <span>Conexões de terceiros detectadas nesta página</span>
+      </div>
+      <div id="tracking-list" class="data-list">
+        <p class="empty-msg">Nenhuma conexão de terceiros detectada.</p>
+      </div>
+    </div>
+
+    <div id="tab-cookies" class="tab-panel">
+      <div class="panel-header">
+        <span>Cookies injetados nesta página</span>
+      </div>
+      <div id="cookies-list" class="data-list">
+        <p class="empty-msg">Nenhum cookie detectado.</p>
+      </div>
+      <div id="supercookies-section" style="display:none">
+        <div class="section-title">Supercookies (ETag / HSTS)</div>
+        <div id="supercookies-list" class="data-list"></div>
+      </div>
+    </div>
+
+    <div id="tab-storage" class="tab-panel">
+      <div class="panel-header">
+        <span>Armazenamento local da página</span>
+      </div>
+      <div id="storage-content">
+        <p class="empty-msg">Aguardando dados de armazenamento...</p>
+      </div>
+    </div>
+
+    <div id="tab-fingerprint" class="tab-panel">
+      <div class="panel-header">
+        <span>Tentativas de browser fingerprinting detectadas</span>
+      </div>
+      <div id="fingerprint-list" class="data-list">
+        <p class="empty-msg">Nenhuma tentativa de fingerprinting detectada.</p>
+      </div>
+    </div>
+
+    <div id="tab-hijacking" class="tab-panel">
+      <div class="panel-header">
+        <span>Ameaças de hijacking e hooking</span>
+      </div>
+      <div id="hijacking-list" class="data-list">
+        <p class="empty-msg">Nenhuma ameaça detectada.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <button id="btn-refresh">&#x21bb; Atualizar</button>
+    <span id="last-update">—</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
