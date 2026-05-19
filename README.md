@@ -8,7 +8,7 @@ Extensão WebExtension para Firefox que detecta e apresenta as principais ameaç
 
 A captura abaixo mostra a extensão em ação no **YouTube**, um dos sites com mais rastreamento na web:
 
-![Privacy Guard no YouTube](docs/demo-youtube.png)
+![Privacy Guard no YouTube](docs/demo-youtube.jpg)
 
 **Resultado: Score 73 / 100 — "Razoável"**
 
@@ -158,3 +158,39 @@ Página web
 - [Fingerprintable.org](https://fingerprintable.org) — Teste de fingerprinting
 - [Cover Your Tracks (EFF)](https://coveryourtracks.eff.org) — Verificação de fingerprint
 - [Firefox Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) — Referência de extensão de privacidade
+
+
+
+---
+![Privacy Guard no YouTube](docs/interessante.png)
+
+
+# Miojo Cremoso na Frigideira
+
+## Ingredientes
+- 1 pacote de miojo
+- 150 ml a 200 ml de água
+- 1 envelope de tempero do miojo
+- 1 colher (sopa) de manteiga ou margarina
+- 2 colheres de requeijão
+- Queijo muçarela ou parmesão ralado a gosto
+
+## Modo de preparo
+
+1. **Adicione a água**  
+   Coloque cerca de 150 ml a 200 ml de água na frigideira e leve ao fogo.
+
+2. **Coloque o macarrão**  
+   Quando a água começar a ferver, adicione o bloco de miojo inteiro.
+
+3. **Tempere**  
+   Adicione o envelope de tempero e a manteiga ou margarina. Isso ajuda o macarrão a absorver mais sabor enquanto cozinha.
+
+4. **Finalize com cremosidade**  
+   Espere a água secar quase completamente. Desligue o fogo e adicione o requeijão junto com o queijo ralado. Misture bem até ficar bem cremoso.
+
+## Dica extra
+Se quiser deixar ainda mais insano:
+- Adicione bacon crocante
+- Coloque um ovo mexido
+- Finalize com pimenta-do-reino e cheiro-verde
