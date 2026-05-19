@@ -4,6 +4,29 @@ Extensão WebExtension para Firefox que detecta e apresenta as principais ameaç
 
 ---
 
+## Demonstração
+
+A captura abaixo mostra a extensão em ação no **YouTube**, um dos sites com mais rastreamento na web:
+
+![Privacy Guard no YouTube](docs/demo-youtube.png)
+
+**Resultado: Score 73 / 100 — "Razoável"**
+
+Deduções detectadas pelo Privacy Guard no YouTube:
+- **−5**: 1 domínio rastreador conhecido (`googleads.g.doubleclick.net`)
+- **−2**: excesso de conexões de terceiros (11 domínios externos)
+- **−10**: 2 supercookies via ETag/HSTS
+
+Domínios de terceiros identificados na sessão:
+| Domínio | Tipo | Req. |
+|---|---|---|
+| `googleads.g.doubleclick.net` | xmlhttprequest — **RASTREADOR** | ×2 |
+| `fonts.gstatic.com` | font | ×12 |
+| `fonts.googleapis.com` | stylesheet | ×3 |
+| `accounts.google.com` | sub_frame | ×3 |
+
+---
+
 ## Funcionalidades
 
 | Categoria | O que detecta | Pontos |
